@@ -9,7 +9,7 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{\textbf{Complex Network Analysis} \\ Assignment 3\\}
+\lhead{\textbf{Complex Network Analysis} \\ Assignment 5\\}
 \rhead{Maria Kagkeli \\ Maria Regina Lily \\ Mihai Verzan}
 \headheight 10pc
 \voffset -10pc
@@ -19,10 +19,50 @@
 
 
 % problem 1
-\section{Power Laws}
+\section*{Problem 5-1: Role of Preferential Attachment}
 
-\subsection{}
+\subsection*{1}
+\begin{align*}
+ \frac{dk_{i}}{dt} \approx 
+ m \Pi k_{i} \approx 
+ m \cdot \frac{1}{m_0 + k-1} = 
+ \frac{m}{m_0 + t -1}&&   \text{(5.12)}
+\end{align*}
+
+\subsection*{2}
+\begin{align*}
+    K_i(t)& = m \left[ 1 + \log \left( \frac{m_0 + t - 1}{m_0 + t_i - 1} \right) \right]
+    &&&&
+\end{align*}
+
+\subsection*{3}
+\begin{align*}
+  m &\left[ 1 + \log  \frac{m_0 + t - 1}{m_0 + 1 - m_0 + (m_0 + t - 1)\exp \left( 1 - \frac{k}{m} \right)}  \right]  \\ \\
+  = m &\left[ 1 + \log( m_0 + t - 1) - \log (m_0 + t - 1) \exp \left( 1 - \frac{k}{m}\right) \right] \\ \\
+  = m &\left[ 1 + \log(m_0 + t - 1) - (\log m_0 + t - 1)  - \log \left( \exp \left( 1 - \frac{k}{m} \right) \right) \right] \\ \\
+  = m &\left[ 1 - 1 + \frac{k}{m} \right] \\ \\
+  = k   
+\end{align*}
+
+\subsection*{4}
+\begin{align*}
+ P(k) & = 1 - \exp \left( 1 - \frac{k}{m} \right) &&&&
+\end{align*}
+
+\subsection*{5}
+\begin{align*}
+ P(k) & = \frac{dP(k)}{dk} = \frac{e^{1 - \frac{k}{m}}}{m} &&&&
+\end{align*}
 
 \newpage
+\section*{Problem 5-2: Friendship Paradox}
+
+
+\newpage
+\section*{Problem 5-3: Barabási-Albert Model}
+
+
+
+
 
 \end{document}

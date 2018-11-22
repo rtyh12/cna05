@@ -17,8 +17,6 @@
 \begin{document}
 
 
-
-% problem 1
 \section*{Problem 5-1: Role of Preferential Attachment}
 
 \subsection*{1}
@@ -27,12 +25,6 @@
  m \Pi k_{i} \approx 
  m \cdot \frac{1}{m_0 + k-1} = 
  \frac{m}{m_0 + t -1}&&   \text{(5.12)}
-\end{align*}
-
-\subsection*{2}
-\begin{align*}
-    K_i(t)& = m \left[ 1 + \log \left( \frac{m_0 + t - 1}{m_0 + t_i - 1} \right) \right]
-    &&&&
 \end{align*}
 
 \subsection*{3}
@@ -44,11 +36,6 @@
   = k   
 \end{align*}
 
-\subsection*{4}
-\begin{align*}
- P(k) & = 1 - \exp \left( 1 - \frac{k}{m} \right) &&&&
-\end{align*}
-
 \subsection*{5}
 \begin{align*}
  P(k) & = \frac{dP(k)}{dk} = \frac{e^{1 - \frac{k}{m}}}{m} &&&&
@@ -56,13 +43,42 @@
 
 \newpage
 \section*{Problem 5-2: Friendship Paradox}
-
+\subsection*{1}
+\subsection*{4}
+People with lots of friends are more likely to be counted as one of your friends in the first place.
 
 \newpage
 \section*{Problem 5-3: Barabási-Albert Model}
 
+For source code, see \texttt{asg005.ipynb}
+
+\subsection*{2}
+
+\begin{tabular}{l | c c }
+    & Practical Results & Analytical Results \\
+\hline
+Number of Nodes& 105 & 105 \\
+Number of Edges& 310 & 310\\
+Sum of Node Degree& 620 &  -
+\end{tabular}
+\medskip
+
+Based on these values, we can confirm that our \texttt{barabasi\_albert} function is correct
+
+\subsection*{3}
+
+\begin{tabular}{l | c c }
+    & Practical Results & Analytical Results \\
+\hline
+Average Clustering Coefficient& 0.0512 & 0.0475 \\
+Diameter                      & 5 & 3.575\\
+$\gamma$                      & 10.9&  3
+
+\end{tabular}
+\medskip
 
 
-
+%TO DO: comment on results (avg clus coeff and gamma).
+We obtained a higher value for the diameter of our generated network than the expected value according the lecture slides. However it is not too far off, and the formula presented in the lecture is for the average diameter of all possible Barabási-Albert networks based on their size, so it is OK to deviate slightly from this average.
 
 \end{document}
